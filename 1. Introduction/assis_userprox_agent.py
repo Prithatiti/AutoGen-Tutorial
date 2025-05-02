@@ -19,11 +19,11 @@ assitant = AssistantAgent(
 user_proxy = UserProxyAgent(
     name = "user_proxy_agent",
     llm_config = llm_config,
+    human_input_mode = "NEVER"
     code_execution_config = {
         "workd_dir": "Code Execution",
         "use_docker": False
-    },
-    human_input_mode = "NEVER"
+    }
 )
 
 # Start the agent
